@@ -21,68 +21,53 @@
     </head>
     <body>
     <div class="container">
-        <div class="row">
-            <header class="mb-5">
-                <!-- As a link -->
-                <nav class="navbar navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/about">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p>
-                    Link to my project repository on Dockerhub:
-                    https://hub.docker.com/repository/docker/hamidrazavi/project1
-                </p>
-                <p>
-                    Container: A container is a standard unit of software that packages up code and all its dependencies
-                    so the
-                    application runs quickly and reliably from one computing environment to another. A Docker container
-                    image is a lightweight, standalone, executable package of software that includes everything needed
-                    to run an application: code, runtime, system tools, system libraries and settings.
-                </p>
-                <p>
-                    Images: A Docker image is a file used to execute code in a Docker container. Docker images act as a
-                    set of instructions to build a Docker container, like a template. Docker images also act as the
-                    starting point when using Docker. An image is comparable to a snapshot in virtual machine (VM)
-                    environments.
-                </p>
-                <p>
-                    Docker Commands I have learned in IS601 class:
-                    docker –version: command is used to get the currently installed version of docker.
-                    docker pull (image name): This command is used to pull images from the docker
-                    repository(hub.docker.com).
-                    docker run -it -d (image name): This command is used to create a container from an image.
-                    docker ps: This command is used to list the running containers.
-                    docker exec -it (container id) bash: This command is used to access the running container.
-                    docker stop (container id): This command stops a running container.
-                    docker kill (container id): This command kills the container by stopping its execution immediately.
-                    docker commit (conatainer id) (username/imagename) This command creates a new image of an edited
-                    container on the local system.
-                    docker push: docker push (username/image name): This command is used to push an image to the docker
-                    hub repository.
-                    docker images: This command lists all the locally stored docker images.
-                    docker build (path to docker file): This command is used to build an image from a specified docker
-                    file.
-                </p>
-                <p>
-                    How to start the project and how to access the container with the terminal: Step 1 is to obtain the
-                    container ID by running the following command: docker ps, Step 2 is to Access the Docker container
-                    by running the following command: docker exec -it (container_id).
-                </p>
+        <h1>Docker</h1>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>
+                <div>
+        <a href="https://hub.docker.com/repository/docker/hamidrazavi/project1" target=_blank>Link to my repository on
+            DockerHub</a>
+    </div>
+            <p>
+                Container: A container is a standard unit of software that packages up code and all its dependencies
+                so the
+                application runs quickly and reliably from one computing environment to another. A Docker container
+                image is a lightweight, standalone, executable package of software that includes everything needed
+                to run an application: code, runtime, system tools, system libraries and settings.
+            </p>
+            <p>
+                Images: A Docker image is a file used to execute code in a Docker container. Docker images act as a
+                set of instructions to build a Docker container, like a template. Docker images also act as the
+                starting point when using Docker. An image is comparable to a snapshot in virtual machine (VM)
+                environments.
+            </p>
+              <p>
+                How to start the project and how to access the container with the terminal: Step 1 is to obtain the
+                container ID by running the following command: docker ps, Step 2 is to Access the Docker container
+                by running the following command: docker exec -it (container_id).
+            </p>
+            <div class="container">
+                <h1>Docker Commands I have learned in IS601 class:</h1>
             </div>
+            <p>&#9642; docker –version: command is used to get the currently installed version of docker.</p>
+            <p>&#9642; docker pull (image name): This command is used to pull images from the docker
+            repository(hub.docker.com).</p>
+            <p>&#9642; docker run -it -d (image name): This command is used to create a container from an image.</p>
+            <p>&#9642; docker ps: This command is used to list the running containers.</p>
+            <p>&#9642; docker exec -it (container id) bash: This command is used to access the running container.</p>
+            <p>&#9642; docker stop (container id): This command stops a running container.</p>
+            <p>&#9642; docker kill (container id): This command kills the container by stopping its execution immediately.</p>
+            <p>&#9642; docker commit (conatainer id) (username/imagename) This command creates a new image of an edited
+            container on the local system.</p>
+            <p>&#9642; docker push: docker push (username/image name): This command is used to push an image to the docker
+            hub repository.</p>
+            <p>&#9642; docker images: This command lists all the locally stored docker images.</p>
+            <p>&#9642; docker build (path to docker file): This command is used to build an image from a specified docker
+            file.</p>
         </div>
+    </div>
 
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
