@@ -1,4 +1,4 @@
-# Project Setup
+# Project Setup!
 
 Link to the Project 1:
 https://hamidproject1.herokuapp.com/
