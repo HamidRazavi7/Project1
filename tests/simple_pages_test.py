@@ -5,10 +5,13 @@ def test_request_main_menu_links(client):
     response = client.get("/")
     assert response.status_code == 200
     assert b'<a class="nav-link" href="/about">About</a>' in response.data
-    assert b'<a class="nav-link" href="/page1">Page 1</a>' in response.data
-    assert b'<a class="nav-link" href="/page2">Page 2</a>' in response.data
-    assert b'<a class="nav-link" href="/page3">Page 3</a>' in response.data
-    assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
+    assert b'<a class="nav-link" href="/page1">Git</a>' in response.data
+    assert b'<a class="nav-link" href="/page2">Docker</a>' in response.data
+    assert b'<a class="nav-link" href="/page3">Flask</a>' in response.data
+    assert b'<a class="nav-link" href="/page4">CD/CI</a>' in response.data
+    assert b'<a class="nav-link" href="/page5">OOP</a>' in response.data
+    assert b'<a class="nav-link" href="/page6">AAA</a>' in response.data
+    assert b'<a class="nav-link" href="/page7">SOLID</a>' in response.data
 
 def test_request_index(client):
     """This makes the index page"""
@@ -46,7 +49,22 @@ def test_request_page4(client):
     assert response.status_code == 200
     assert b"Page 4" in response.data
 
-def test_request_page_not_found(client):
+def test_request_page5(client):
     """This makes the index page"""
     response = client.get("/page5")
-    assert response.status_code == 404
+    assert response.status_code == 200
+    assert b"Page 5" in response.data
+
+def test_request_page6(client):
+    """This makes the index page"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b"Page 6" in response.data
+
+def test_request_page7(client):
+    """This makes the index page"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b"Page 7" in response.data
+
+
