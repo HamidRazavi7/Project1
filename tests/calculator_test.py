@@ -24,10 +24,10 @@ def test_calculator_result_property():
     #  these show multiple calculator classes being instantiated and used independently
     calc1 = Calculator()
     calc2 = Calculator()
-    calc1.result = 5
-    calc2.result = 6
-    assert calc1.result == 5
-    assert calc2.result == 6
+    calc1.result = 8
+    calc2.result = 9
+    assert calc1.result == 8
+    assert calc2.result == 9
 
 
 def test_calculator_add_method():
