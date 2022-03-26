@@ -59,5 +59,3 @@ def test_request_page7(client):
     response = client.get("/page7")
     assert response.status_code == 200
     assert b"Page 7" in response.data
-
-
