@@ -32,40 +32,42 @@
                 build the container and push it into the Dockerhub. Consequently, the program is deployed into the
                 Heroku for the automated running.
             </p>
-            <p>
-                To review the code using the development server before merging, the following steps are taken:
-            <ol>
-                <li>The master branch where the code is stored is necessary.</li>
-                <li>Another branch needs to be created and modified before being pushed into the GitHub.</li>
-                <li>A pull request would trigger the testing.</li>
-                <li>Once the test is passed, the branch is merged into the master branch.</li>
-            </ol>
-            </p>
-            <p>
-                When pushing the master into the GitHub repo, the code would be tested with pytest. The container is
-                then
-                built and deployed by the production workflow. By creating a production workflow, anytime the code is
-                pushed into
-                the GitHub, a series of actions is triggered that deploys the app into the production server. For this,
-                a DockerHub
-                username and password, as well as a Heroku API is necessary. These would be added under the "secret" tab
-                of the repository setting.
-            </p>
-            <p>
-                The image of the project can be deployed into the Dockerhub when the master branch is updated. When the
-                master
-                is updated, a pull request would allow merging the master into another branch. This triggers the
-                following steps:
-            <ol>
-                <li>Test on Heroku runtest</li>
-                <li>Build it on Heroku as a container</li>
-                <li>Deploy it on Heroku</li>
-            </ol>
-            Once the step 2 is completed, the Docker repository is updated, you can see the image of the code.
-            Anytime
-            a pull request is submitted, it creates an image and saves it on the Dockerhub.
-        </p>
          </div>
+            <div class="col-lg-3">
+                <img src="static/images/cd.jpg" width="700">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                 <p>
+                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
+                push
+                requests. The development workflow (dev.yml), is responsible for the push requests and the production
+                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
+                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
+                Heroku for the automated running.
+            </p>
+                </div>
+            <div class="col-lg-3">
+                <img src="static/images/cd.jpg" width="700">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+        <h1>Continuous Integration and Deployment</h1>
+            <p>
+                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
+                push
+                requests. The development workflow (dev.yml), is responsible for the push requests and the production
+                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
+                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
+                Heroku for the automated running.
+            </p>
+                </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
