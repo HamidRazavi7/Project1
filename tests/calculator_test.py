@@ -11,7 +11,6 @@ def test_calculator_is_instance():
     # checking that calculator variable contains an instance of Calculator class
     assert isinstance(calculator, Calculator)
 
-
 def test_calculator_get_result_method():
     """Testing the Calculator"""
     calculator = Calculator()
@@ -28,9 +27,8 @@ def test_calculator_result_property():
     assert calc1.result == 8
     assert calc2.result == 9
 
-
 def test_calculator_add_method():
-    """Testing the Calculator"""
+    """Testing the Calculator add"""
     calculator = Calculator()
     # this is show using the calculator object add method
     assert calculator.add(1, 1) == 2
@@ -41,9 +39,14 @@ def test_calculator_subtract_method():
     assert calculator.subtract(1, 1) == 0
 
 def test_calculator_multiply_method():
-    """Testing the Calculator Subtract"""
+    """Testing the Calculator multiply"""
     calculator = Calculator()
     assert calculator.multiply(1, 1) == 1
+
+def test_calculator_divide_method():
+    """Testing the Calculator divide"""
+    calculator = Calculator()
+    assert calculator.divide(1, 1) == 1
 
 def test_my_first_test_add():
     """Testing the simplest addition"""
@@ -77,3 +80,14 @@ def test_my_first_test_multiply_with_variables():
     value_b = 2
     value_c = value_a + value_b
     assert value_a + value_b == value_c
+
+def test_my_first_test_divide():
+    """Testing the simplest division"""
+    assert 1 / 1 == 1
+
+def test_my_first_test_divide_with_variables():
+    """Testing the simplest multiplication"""
+    value_a = 1
+    value_b = 2
+    value_c = value_a / value_b
+    assert value_a / value_b == value_c
