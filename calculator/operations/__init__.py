@@ -17,16 +17,16 @@ class Subtraction:
 
     @staticmethod
     def subtract(value_1, value_2):
-        """ This is the add method"""
+        """ This is the subtract method"""
         return value_1 - value_2
 
 
 class Multiplication:
-    """ This is the subtraction class"""
+    """ This is the multiplication class"""
 
     @staticmethod
     def multiply(value_1, value_2):
-        """ This is the add method"""
+        """ This is the multiply method"""
         return value_1 * value_2
 
 
@@ -35,9 +35,5 @@ class Division:
 
     @staticmethod
     def divide(value_1, value_2):
-        """ This is the add method"""
-        try:
-            result = value_1 / value_2
-        except:
-            print(sys.exc_info()[0]), "cannot divide by zero"
-        return result
+        """ This is the division method"""
+        return value_1 / value_2

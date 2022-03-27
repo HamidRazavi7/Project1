@@ -23,8 +23,12 @@ class Calculator:
         return self.result
 
     def divide(self, value_1, value_2):
-        """ This is the multiply method"""
+        """ This is the divide method"""
         self.result = Division.divide(value_1, value_2)
+        try:
+            self.result
+        except:
+            print(sys.exc_info()[0]), "cannot divide by zero"
         return self.result
 
     def get_result(self):
