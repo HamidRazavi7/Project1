@@ -36,4 +36,8 @@ class Division:
     @staticmethod
     def divide(value_1, value_2):
         """ This is the add method"""
-        return value_1 / value_2
+        try:
+            result = value_1 / value_2
+        except:
+            print(sys.exc_info()[0]), "cannot divide by zero"
+        return result
