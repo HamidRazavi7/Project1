@@ -25,48 +25,103 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-            <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-            <p>
-                To review the code using the development server before merging, the following steps are taken:
-            <ol>
-                <li>The master branch where the code is stored is necessary.</li>
-                <li>Another branch needs to be created and modified before being pushed into the GitHub.</li>
-                <li>A pull request would trigger the testing.</li>
-                <li>Once the test is passed, the branch is merged into the master branch.</li>
-            </ol>
-            </p>
-            <p>
-                When pushing the master into the GitHub repo, the code would be tested with pytest. The container is
-                then
-                built and deployed by the production workflow. By creating a production workflow, anytime the code is
-                pushed into
-                the GitHub, a series of actions is triggered that deploys the app into the production server. For this,
-                a DockerHub
-                username and password, as well as a Heroku API is necessary. These would be added under the "secret" tab
-                of the repository setting.
-            </p>
-            <p>
-                The image of the project can be deployed into the Dockerhub when the master branch is updated. When the
-                master
-                is updated, a pull request would allow merging the master into another branch. This triggers the
-                following steps:
-            <ol>
-                <li>Test on Heroku runtest</li>
-                <li>Build it on Heroku as a container</li>
-                <li>Deploy it on Heroku</li>
-            </ol>
-            Once the step 2 is completed, the Docker repository is updated, you can see the image of the code.
-            Anytime
-            a pull request is submitted, it creates an image and saves it on the Dockerhub.
-        </p>
-         </div>
+                <p>
+                    • Instantiation: Is the act of taking a class and making it into an object. Instantiation allows
+                    having multiple calculator classes with their own individual properties such as result. In my code
+                    example below, I have instantiated the calculator 1 and 2 by adding parenthesis and storying them
+                    in the Calculator class.
+                    <br>
+                    <br>
+                    calc1 = Calculator()
+                    <br>
+                    calc2 = Calculator()
+                    <br>
+                    calc1.result = 8
+                    <br>
+                    calc2.result = 9
+                    <br>
+                    assert calc1.result == 8
+                    <br>
+                    assert calc2.result == 9
+                    <br>
+                    <br>
+                </p>
+                <p>
+                    • Object: Is a self-contained component which consists of methods and properties to make a
+                    particular
+                    type of data useful. Objects are instances of a class created with specifically defined data.
+                    Objects can correspond to real-world objects or an abstract entity. Calculator is an object since
+                    you can buy it at a store.
+                    <br>
+                    <br>
+                </p>
+
+                <p>
+                    • Class: Classes are user-defined data types that act as the blueprint for individual objects,
+                    attributes, and methods. When you group your functions together you put them in a class. Purpose of
+                    class is to put related functions together such as creating a subtraction and multiplication
+                    classes.
+                    <br>
+                    <br>
+                    class Subtraction:
+                    <br>
+                    @staticmethod
+                    <br>
+                    def subtract(value_1, value_2):
+                    <br>
+                    return value_1 - value_2
+                    <br>
+                <br>
+                </p>
+
+                <p>•	Namespace: It’s like a folder while class is a file. How you cannot have to files names the same in a folder, you cannot have two classes called the same thing in a folder. Order is to have a namespace first and then a class. Namespace is our folder and class are the file. Class being file it has functions inside of it that are the texts that what’s inside the file.
+  <br>
+                      <br>
+                    Example: _init_.py is our file/class inside the operations namespace/folder.
+                    <br>
+                <br>
+                </p>
+
+                <p>•	Constructor: A constructor method is a special function that creates an instance of the class.
+                    Typically, constructor methods accept input arguments to assign the data stored in properties and
+                    return an initialized object. Whenever the addition object is created it fires the constructor function. So, when an object or class is instantiated, the first method called automatically is called the constructor:
+  <br>
+                      <br>
+                    def __init__(self, tuple_list: tuple):
+                      <br>
+Self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+                     <br>
+                <br>
+                </p>
+
+                <p>
+
+                     <br>
+                <br>
+                </p>
+
+                <p>
+
+                     <br>
+                <br>
+                </p>
+
+                <p>
+
+                     <br>
+                <br>
+                </p>
+
+                <p>
+
+                     <br>
+                <br>
+                </p>
+
+
+
+
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
