@@ -20,20 +20,38 @@
 
     </head>
     <body>
-    <h1>OOP</h1>
+    <h1>Principles of Object-Oriented Programming</h1>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-            <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-         </div>
+                <p>
+                    &#9642;Inheritance: In Inheritance one class is inheriting the properties and methods of another
+                    class.it means that you create a (child) class by deriving from another (parent) class. This way, we
+                    form a hierarchy. The child class reuses all fields and methods of the parent class (common part)
+                    and can implement its own (unique part). Has two types; single and multiple. Like you have
+                    calculator class and statistical calculator. The calculator class could be the parent, and the
+                    statistical calculator could be the child. Because in statistical you would have addition
+                    multiplication and subtraction already, so you want to take them from the parent class and include
+                    in the child class. Class can only have one parent and one child only, basically no grandchildren.
+                    This is single inheritance. In multiple inheritance you can put multiple classes together to from a
+                    super class which is bundle of classes. Rather than parent child relationship for our regular and
+                    statistical calculator we could have a statistical calculator and specify what operations
+                    statistical calculator would do by naming the operations. i.e statistical you get addition,
+                    multiplication, subtraction, multiplication, mean, mode, and …, they have no dependencies on each
+                    other. The bigger the class the harder to use, so make class small even it has one method. By
+                    inheritance you can add classes together. The only time you would use parent child relationship is
+                    when you must share data like when we have a user object and have system admin with different
+                    functionality. We might have parent class which is user, and we might extend it with system
+                    administrator and system admin would have additional functionality to go along with each
+                    object/user.
+                    <br>
+                    <br>
+                    Example code: class Addition(Calculation)
+                    The addition class now has all of the Calculation class code added to it, so we don’t have to repeat
+                    it.
+                </p>
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
@@ -42,15 +60,43 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                 <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-                </div>
+                <p>
+                    &#9642;Encapsulation: in instantiation you take a class, and you make a copy of the class in memory,
+                    and
+                    you can have many copies of a class in memory independent of each other.
+                    <br>
+                    <br>
+                    def test_calculator_is_instance():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    # instantiating the Calculator class
+                    <br>
+                    calculator = Calculator()
+                    <br>
+                    assert isinstance(calculator, Calculator)
+                    <br>
+                    <br>
+                    in this case we have two individual calculator classes with their own specific operaions which are
+                    encapsulated:
+                    <br>
+                    def test_calculator_result_property():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    calc1 = Calculator()
+                    <br>
+                    calc2 = Calculator()
+                    <br>
+                    calc1.result = 8
+                    <br>
+                    calc2.result = 9
+                    <br>
+                    assert calc1.result == 8
+                    <br>
+                    assert calc2.result == 9
+                </p>
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
@@ -59,16 +105,42 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-        <h1>Continuous Integration and Deployment</h1>
-            <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-                </div>
+                <p>&#9642;Polymorphism: in Polymorphism one shape can do many things. Polymorphism allows to use a class
+                    exactly like its parent. Although each child class contains its own individual methods.
+                    <br>
+                    <br>
+                    class Addition(Calculation):
+                    <br>
+                    def get_result(self)
+                    <br>
+                    <br>
+                    Get_result is the same method name for all four operations/objects. When I call the result on the
+                    addition object, I don’t have to put an if statement to inspect. The addition object knows that it’s
+                    got a list of numbers and it needs to add that list of numbers, so we have an addition object and
+                    get_result method gets the result of the addition operation. The subtraction object gets the result
+                    of subtraction operation, and so on for the remaining operations.
+                    Depending on the type of the operation it calls the correct method that object and that is part of
+                    the polymorphism concept. The core of polymorphism is that each object should know what it can do,
+                    in this case my four operations should know how to do the correct calculations for themselves.
+                </p>
+                <p>&#9642;Abstraction: In object-oriented design, programs are often extremely large. And separate
+                    objects communicate with each other a lot. So, maintaining a large codebase like this for years —
+                    with changes along the way — is difficult. Abstraction is a concept aiming to ease this problem.
+                    Applying abstraction means that each object should only expose a high-level mechanism for using it.
+                    This mechanism should hide internal implementation details. It should only reveal operations
+                    relevant for the other objects.
+                    Is like having a calculator class and then calculations and then operations, they are like layers on
+                    top of each other.
+
+
+                    <br>
+                    <br>
+                </p>
+                <h1>Resources:</h1>
+                <p>
+                    &#9642;https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/
+                </p>
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>

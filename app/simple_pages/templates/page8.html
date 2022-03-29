@@ -25,48 +25,141 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-            <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-            <p>
-                To review the code using the development server before merging, the following steps are taken:
-            <ol>
-                <li>The master branch where the code is stored is necessary.</li>
-                <li>Another branch needs to be created and modified before being pushed into the GitHub.</li>
-                <li>A pull request would trigger the testing.</li>
-                <li>Once the test is passed, the branch is merged into the master branch.</li>
-            </ol>
-            </p>
-            <p>
-                When pushing the master into the GitHub repo, the code would be tested with pytest. The container is
-                then
-                built and deployed by the production workflow. By creating a production workflow, anytime the code is
-                pushed into
-                the GitHub, a series of actions is triggered that deploys the app into the production server. For this,
-                a DockerHub
-                username and password, as well as a Heroku API is necessary. These would be added under the "secret" tab
-                of the repository setting.
-            </p>
-            <p>
-                The image of the project can be deployed into the Dockerhub when the master branch is updated. When the
-                master
-                is updated, a pull request would allow merging the master into another branch. This triggers the
-                following steps:
-            <ol>
-                <li>Test on Heroku runtest</li>
-                <li>Build it on Heroku as a container</li>
-                <li>Deploy it on Heroku</li>
-            </ol>
-            Once the step 2 is completed, the Docker repository is updated, you can see the image of the code.
-            Anytime
-            a pull request is submitted, it creates an image and saves it on the Dockerhub.
-        </p>
-         </div>
+                <p>
+                    solid is the principles of object-oriented design. By following these principles, you can improve
+                    the reliability of your code by working on its structure and its logical consistency. In development
+                    teams, following the SOLID principles allows the programs of different developers to work together.
+                    To simplify the SOLID concept, it essentially suggests breaking down your code into small pieces,
+                    don’t repeat yourself, having each little piece be independent of each other, and assigning each
+                    little piece to do everything it needs to perform its action. As an example, in my calculator
+                    project, my division function should be complete and be able to handle divide by zero exception. If
+                    I’m to use the division function, the only other thing that can into the division function, is how
+                    to deal with its exception when dividing by zero. I should not combine a divide function with an add
+                    function.
+                </p>
+                <h1>Breakdown of SOLID principles in more details: </h1>
+                <p>&#9642;The Single-Responsibility Principle (SRP): “A class should have one, and only one, reason to
+                    change”
+                    any part of the program has a single responsibility; in our code we have an add method that stores
+                    the result of the addition. So, this method does one thing, it stores the result of an addition
+                    calculation in ins result. The single responsibility of addition class Add method is to add two
+                    numbers and return them.
+                    <br>
+                    <br>
+                    self.result = Addition.add(value_1, value_2)
+                    <br>
+                    Self.result stores the result in calculator, while the Addition.add(value_1, value_2) does the
+                    addition action.
+                </p>
+                <p>&#9642;The Open-Closed Principle (OCP): “Software entities … should be open for extension but closed
+                    for modification”. A division function must have the diving by zero exception in it. Once the
+                    function is finished with coding, it needs to be closed to modification. It is possible to modify
+                    how it works externally, but the actual function itself should not be constantly changed.
+                    <br>
+                    <br>
+                    def divide(self, value_1, value_2):
+                    <br>
+                    """ This is the divide method"""
+                    <br>
+                    self.result = Division.divide(value_1, value_2)
+                    <br>
+                    try:
+                    <br>
+                    self.result
+                    <br>
+                    except:
+                    <br>
+                    print(sys.exc_info()[0]), "cannot divide by zero"
+                    <br>
+                    return self.result
+                </p>
+                <p>
+                    &#9642;The Liskov Substitution Principle (LSP):“Functions that use pointers or references to base
+                    classes must be able to use objects of derived classes without knowing it”
+
+                    The parent class Calculation works for any child classes such as addition, multiplication, division,
+                    and subtraction classes. Basically, the parent class does not expect anything from the child class
+                    to provide. Essentially, your parent-child classes do not have dependencies. You should not make a
+                    parent class that is connected to the child class.
+                </p>
+                &#9642;The Interface Segregation Principle (ISP): “Many client-specific interfaces are better than
+                one general-purpose interface” meaning classes should do one and only one thing.
+
+                We don’t have one class called operations with separate methods for each one. We have one class per type
+                of operation. You don’t want to make an operations class because there is two ways to do it: one way to
+                have separate class for subtraction addition and multiplication. Example of a not correct code:
+                <br>
+                <br>
+                class operations:
+                <br>
+                def add
+                <br>
+                def subtract
+                </p>
+                &#9642;The Dependency inversion Principle (DIP):
+                “Abstractions should not depend on details. Details should depend on abstraction. High-level modules
+                should not depend on low-level modules. Both should depend on abstractions” means functions call each
+                other.
+                when the calculator_tesy.py is calling the add, subtract, divide, multiplication methods, it acts as a
+                chain of things going down as the interface of decency inversion. We are not coding to specifically to a
+                calculator where we are making multiple functions to assemble into the calculator, as they are
+                independent of each other.
+                <br>
+                <br>
+                Class Addition(calculation):
+                <br>
+                Class Multiplication(calculation):
+                <br>
+                Class Subtraction(calculation):
+                <br>
+                Class Division(calculation):
+                </p>
+                <h1>Design Pattern</h1>
+                <p>Design patterns: this is like the bible of OOP! When you take the properties of OOP and you combine
+                    it with SOLID need certain things that code needs to do, the result becomes design patterns. For
+                    example, if you need to design objects with certain configurations, it provides guidance on how to
+                    create that object. In another words, when you create codes, the design pattern helps you to do it
+                    based on the industry standards, so your solution is consistent with others. The design pattern
+                    allows programmers that use different codes to communicate. Based on the design pattern, regardless
+                    of the language type the code structures are all called the same thing. The following is an example
+                    of design method in calculator project:
+                    <br>
+                    <br>
+                    @classmethod
+                    <br>
+                    def create(cls, tuple_list: tuple):
+                    <br>
+                    return clas(tuple_list)
+                </p>
+                <p>Design patterns are typical solutions to common problems in software design. Each pattern is like a
+                    blueprint that you can customize to solve a particular design problem in your code.
+                    Creational patterns provide object creation mechanisms that increase flexibility and reuse of
+                    existing code. Structural patterns explain how to assemble objects and classes into larger
+                    structures, while
+                    keeping these structures flexible and efficient. Behavioral patterns take care of effective
+                    communication
+                    and the assignment of responsibilities between objects.
+                    <br>
+                    our first design pattern in IS601 class is the Factory method, which is part of the creational
+                    patterns category. In factory method, you shouldn’t just instantiate an object. You have a create
+                    method/factory method
+                    that creates an object and returns it back. So anytime you need an object, you called the factory
+                    method that would get the object, and it returns the object, instead of creating objects everywhere.
+                    factory method example for addition class:
+                    <br>
+                    <br>
+                    def create(cls, tuple_list: tuple)
+                    <br>
+                    return cls(tuple_list
+                    <br>
+                    <br>
+                </p>
+                <h1>Resources:</h1>
+                <p>
+                    &#9642;https://towardsdatascience.com/solid-coding-in-python-1281392a6a94
+                    &#9642;https://refactoring.guru/design-patterns
+                </p>
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
