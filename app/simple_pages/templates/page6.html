@@ -25,48 +25,150 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-            <p>
-                To set up the project by using GitHub actions, I created workflows. The workflows run tests on pull or
-                push
-                requests. The development workflow (dev.yml), is responsible for the push requests and the production
-                workflow (prod.yml) is responsible for the push requests. During the push/pull requests, the workflows
-                build the container and push it into the Dockerhub. Consequently, the program is deployed into the
-                Heroku for the automated running.
-            </p>
-            <p>
-                To review the code using the development server before merging, the following steps are taken:
-            <ol>
-                <li>The master branch where the code is stored is necessary.</li>
-                <li>Another branch needs to be created and modified before being pushed into the GitHub.</li>
-                <li>A pull request would trigger the testing.</li>
-                <li>Once the test is passed, the branch is merged into the master branch.</li>
-            </ol>
-            </p>
-            <p>
-                When pushing the master into the GitHub repo, the code would be tested with pytest. The container is
-                then
-                built and deployed by the production workflow. By creating a production workflow, anytime the code is
-                pushed into
-                the GitHub, a series of actions is triggered that deploys the app into the production server. For this,
-                a DockerHub
-                username and password, as well as a Heroku API is necessary. These would be added under the "secret" tab
-                of the repository setting.
-            </p>
-            <p>
-                The image of the project can be deployed into the Dockerhub when the master branch is updated. When the
-                master
-                is updated, a pull request would allow merging the master into another branch. This triggers the
-                following steps:
-            <ol>
-                <li>Test on Heroku runtest</li>
-                <li>Build it on Heroku as a container</li>
-                <li>Deploy it on Heroku</li>
-            </ol>
-            Once the step 2 is completed, the Docker repository is updated, you can see the image of the code.
-            Anytime
-            a pull request is submitted, it creates an image and saves it on the Dockerhub.
-        </p>
-         </div>
+                <p>
+                    When we look at a source code, we should always start with the test. The test would tell us what
+                    is happening. When you have a library and want to run the code, you need the test unit to call the
+                    functions which run the code. Basically, the program starts at the test. Testing provides important
+                    feedback that keeps us safe. By running tests, we ensure our program operates the way it supposed to
+                    and informs us of any breaks. It is paramount not to deploy a program that has bugs.
+                </p>
+                <p>The AAA pattern is simple and provides a uniform structure for all tests in the suite. This uniform
+                    structure is one of its biggest advantages: once you get used to this pattern, you can read and
+                    understand the tests more easily. That, in turn, reduces the maintenance cost for your entire test
+                    suite.
+                </p>
+                <p>The arrange section is where you set up the objects to be tested. You bring the system under test to
+                    a desired state and configure the dependencies: either instantiate them directly or prepare their
+                    test doubles. The act section is where you act upon the system under test. You call one of its
+                    methods: pass the dependencies and capture the output value if any. The assert section allows you to
+                    make the claims about the outcome. This may include the return value, the final state of the SUT and
+                    its collaborators, or the methods the SUT called on them.</p>
+                <p>
+                    To set up my unit test, I followed the two steps below:
+                <ol>
+                    <li>First create the calculator test as calculator_test.py file, to test the calculation classes.
+                        I created this first test to see I can create multiplication, addition, subtraction, and
+                        division objects. It does not conduct the operations but ensure it can create the operation
+                        methods to create the operation calculations.
+                    </li>
+                    <li>Once the previous test is proven to run properly, the next step is to create the operations
+                        test as an operation_test.py file. I started with the add method and reworked the calculator
+                        class to use the calculations and follow the same steps for the other three operations.
+                    </li>
+                </ol>
+                </p>
+                <p> I have created a class as a blueprint that holds the code, namespace/folder which is called
+                    calculator namespace. By instantiation I take a class and make a copy of class in memory that can
+                    have many copies independent of each other which refers to the encapsulation method in OOP. In my
+                    calculator program, under the calculator namespace there are two __init__.py files. One is utilized
+                    to create and define the calculator class, while the other is used to define my operation classes
+                    such as addition, </p>
+                <h1>calculator_test.py</h1>
+                <p>
+                    &#9642;This test is run to check my Calculator class. The Calculator class is defined as an
+                    __init__.py
+                    file under the calculator namespace.
+                    <br>
+                    <br>
+                </p>
+                <p>
+                    def test_calculator_is_instance():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    calculator = Calculator()
+                    <br>
+                    assert isinstance(calculator, Calculator
+                    <br>
+                    <br>
+                    &#9642;The calculator = Calculator() instantiates the calculator class. The instance(calculator,
+                    Calculator)
+                    checks to see if the calculator is instantiated object of Calculator. It checks to see if this
+                    variable contains the Calculator class.
+                </p>
+                <p>&#9642;The following codes checks the calculator gets our result method, in another words defines
+                    how it obtains the result:
+                    <br>
+                    <br>
+                    def test_calculator_get_result_method():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    calculator = Calculator()
+                    <br>
+                    assert calculator.get_result() == 0
+                    <br>
+                    <br>
+                    &#9642;The following the calculator gets our result method, in another words defines how it obtains
+                    the
+                    result:
+                    <br>
+                    <br>
+                    def test_calculator_result_property():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    <br>
+                    def test_calculator_add_method():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    calculator = Calculator()
+                    <br>
+                    assert calculator.add(1, 1) == 2
+                    <br>
+                    <br>
+                    &#9642;The lines above define our calculator object and method, once you press and hold
+                    command/control key over
+                    add, it takes you to the add method as below:
+                    <br>
+                    <br>
+                    def add(self, value_1, value_2):
+                    <br>
+                    """ This is the add method"""
+                    <br>
+                    self.result = Addition.add(value_1, value_2)
+                    <br>
+                    return self.result
+                    <br>
+                    <br>
+                    &#9642;The line above is a static method add to operate the sum operation and return the result
+                    property. When you
+                    press command and press add, it takes you to the following:
+                    <br>
+                    <br>
+                    def add(value_1, value_2):
+                    <br>
+                    """ This is the add method"""
+                    <br>
+                    return value_1 + value_2
+                    <br>
+                    &#9642;this helps us with define a static method that can be used without instantiating. It creates
+                    the
+                    sum method when two variables are added.
+                    <br>
+                <h1>operations_test.py</h1>
+                <p>in this test, all tree arranging, acting, and asserting takes place in one line. Arranging is setting
+                    up two variables with values equal to 1. Acting calls the add function to sum the values of the two
+                    variables. The assert steps verify the addition of the two variables is equal to 2. This is the
+                    preferred method of testing since having only one functions makes testing faster. The same step is
+                    used for the remaining operations
+                    <br>
+                    <br>
+                    def test_calculator_operations_add():
+                    <br>
+                    """Testing the Calculator"""
+                    <br>
+                    assert Addition.add(1, 1) == 2
+
+                </p>
+                <h1>Resources:</h1>
+                <p>
+                    &#9642;https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
+                    <br>
+                    &#9642;https://freecontent.manning.com/making-better-unit-tests-part-1-the-aaa-pattern/
+                </p>
+            </div>
             <div class="col-lg-3">
                 <img src="static/images/cd.jpg" width="700">
             </div>
