@@ -63,121 +63,122 @@
                     calculator program, under the calculator namespace there are two __init__.py files. One is utilized
                     to create and define the calculator class, while the other is used to define my operation classes
                     such as addition,
-                <br>
-                <br>
+                    <br>
+                    <br>
                 </p>
                 <h1>calculator_test.py</h1>
-                <p>
-                    &#9642;This test is run to check my Calculator class. The Calculator class is defined as an
-                    __init__.py
-                    file under the calculator namespace.
-                    <br>
-                    <br>
-                </p>
-                <p>
-                    def test_calculator_is_instance():
-                    <br>
-                    """Testing the Calculator"""
-                    <br>
-                    calculator = Calculator()
-                    <br>
-                    assert isinstance(calculator, Calculator
-                    <br>
-                    <br>
-                    &#9642;The calculator = Calculator() instantiates the calculator class. The instance(calculator,
-                    Calculator)
-                    checks to see if the calculator is instantiated object of Calculator. It checks to see if this
-                    variable contains the Calculator class.
-                </p>
-                <p>&#9642;The following codes checks the calculator gets our result method, in another words defines
-                    how it obtains the result:
-                    <br>
-                    <br>
-                    def test_calculator_get_result_method():
-                    <br>
-                    """Testing the Calculator"""
-                    <br>
-                    calculator = Calculator()
-                    <br>
-                    assert calculator.get_result() == 0
-                    <br>
-                    <br>
-                    &#9642;The following the calculator gets our result method, in another words defines how it obtains
-                    the
-                    result:
-                    <br>
-                    <br>
-                    def test_calculator_result_property():
-                    <br>
-                    """Testing the Calculator"""
-                    <br>
-                    <br>
-                    def test_calculator_add_method():
-                    <br>
-                    """Testing the Calculator"""
-                    <br>
-                    calculator = Calculator()
-                    <br>
-                    assert calculator.add(1, 1) == 2
-                    <br>
-                    <br>
-                    &#9642;The lines above define our calculator object and method, once you press and hold
-                    command/control key over
-                    add, it takes you to the add method as below:
-                    <br>
-                    <br>
-                    def add(self, value_1, value_2):
-                    <br>
-                    """ This is the add method"""
-                    <br>
-                    self.result = Addition.add(value_1, value_2)
-                    <br>
-                    return self.result
-                    <br>
-                    <br>
-                    &#9642;The line above is a static method add to operate the sum operation and return the result
-                    property. When you
-                    press command and press add, it takes you to the following:
-                    <br>
-                    <br>
-                    def add(value_1, value_2):
-                    <br>
-                    """ This is the add method"""
-                    <br>
-                    return value_1 + value_2
-                    <br>
-                    &#9642;this helps us with define a static method that can be used without instantiating. It creates
-                    the
-                    sum method when two variables are added.
-                    <br>
+                        <p>
+                            &#9642;This test is run to check my Calculator class. The Calculator class is defined as an
+                            __init__.py
+                            file under the calculator namespace.
+                            <br>
+                            <br>
+                        </p>
+            <p>
+                def test_calculator_is_instance():
                 <br>
-                <h1>operations_test.py</h1>
-                <p> &#9642;in this test, all tree arranging, acting, and asserting takes place in one line. Arranging is setting
-                    up two variables with values equal to 1. Acting calls the add function to sum the values of the two
-                    variables. The assert steps verify the addition of the two variables is equal to 2. This is the
-                    preferred method of testing since having only one functions makes testing faster. The same step is
-                    used for the remaining operations
-                    <br>
-                    <br>
-                    def test_calculator_operations_add():
-                    <br>
-                    """Testing the Calculator"""
-                    <br>
-                    assert Addition.add(1, 1) == 2
+                """Testing the Calculator"""
                 <br>
-                    <br>
-                </p>
-                <h1>Resources:</h1>
-                <p>
-                    &#9642;https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
-                    <br>
-                    &#9642;https://freecontent.manning.com/making-better-unit-tests-part-1-the-aaa-pattern/
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <img src="static/images/cd.jpg" width="700">
-            </div>
+                calculator = Calculator()
+                <br>
+                assert isinstance(calculator, Calculator
+                <br>
+                <br>
+                &#9642;The calculator = Calculator() instantiates the calculator class. The instance(calculator,
+                Calculator)
+                checks to see if the calculator is instantiated object of Calculator. It checks to see if this
+                variable contains the Calculator class.
+            </p>
+            <p>&#9642;The following codes checks the calculator gets our result method, in another words defines
+                how it obtains the result:
+                <br>
+                <br>
+                def test_calculator_get_result_method():
+                <br>
+                """Testing the Calculator"""
+                <br>
+                calculator = Calculator()
+                <br>
+                assert calculator.get_result() == 0
+                <br>
+                <br>
+                &#9642;The following the calculator gets our result method, in another words defines how it obtains
+                the
+                result:
+                <br>
+                <br>
+                def test_calculator_result_property():
+                <br>
+                """Testing the Calculator"""
+                <br>
+                <br>
+                def test_calculator_add_method():
+                <br>
+                """Testing the Calculator"""
+                <br>
+                calculator = Calculator()
+                <br>
+                assert calculator.add(1, 1) == 2
+                <br>
+                <br>
+                &#9642;The lines above define our calculator object and method, once you press and hold
+                command/control key over
+                add, it takes you to the add method as below:
+                <br>
+                <br>
+                def add(self, value_1, value_2):
+                <br>
+                """ This is the add method"""
+                <br>
+                self.result = Addition.add(value_1, value_2)
+                <br>
+                return self.result
+                <br>
+                <br>
+                &#9642;The line above is a static method add to operate the sum operation and return the result
+                property. When you
+                press command and press add, it takes you to the following:
+                <br>
+                <br>
+                def add(value_1, value_2):
+                <br>
+                """ This is the add method"""
+                <br>
+                return value_1 + value_2
+                <br>
+                &#9642;this helps us with define a static method that can be used without instantiating. It creates
+                the
+                sum method when two variables are added.
+                <br>
+                <br>
+            <h1>operations_test.py</h1>
+            <p> &#9642;in this test, all tree arranging, acting, and asserting takes place in one line. Arranging is
+                setting
+                up two variables with values equal to 1. Acting calls the add function to sum the values of the two
+                variables. The assert steps verify the addition of the two variables is equal to 2. This is the
+                preferred method of testing since having only one functions makes testing faster. The same step is
+                used for the remaining operations
+                <br>
+                <br>
+                def test_calculator_operations_add():
+                <br>
+                """Testing the Calculator"""
+                <br>
+                assert Addition.add(1, 1) == 2
+                <br>
+                <br>
+            </p>
+            <h1>Resources:</h1>
+            <p>
+                &#9642;https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
+                <br>
+                &#9642;https://freecontent.manning.com/making-better-unit-tests-part-1-the-aaa-pattern/
+            </p>
         </div>
+        <div class="col-lg-3">
+            <img src="static/images/AAA2.png" width="1500">
+        </div>
+    </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
