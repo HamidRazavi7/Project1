@@ -25,96 +25,104 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-            <p>In order to test the code with pytest, a test folder is created in the root directory. By creating a
-                simpletest_test.py
-                file, we can monitor and test our code. As an example, assert b"Index Page" in response.data allows us
-                to create
-                a version of website and get a request to the homepage. If on the home page we have the Index Page
-                displayed, it
-                passes the
-                test, otherwise it does not pass the test by running pytest and would need to be edited
-                accordingly.
-            </p>
-            <p>To create simple pages and successfully testing them, we need to first create a test with the
-                simple_pages_test
-                file. Next would be creating a blueprint documentation with the init.py file. The final step would be
-                creating
-                the
-                simple pages templates. after completing the steps mentioned, we would run the pytest to make sure our
-                code
-                functions
-                properly before deploying it.
-            </p>
-            <h1>Purpose of Every File in The Project:</h1>
-            <h2>Workflows: A workflow is a configurable-automated process that will run one or more jobs. Workflows are
-                defined by a YAML file checked in to your repository</h2>
-            <ul>
-                <li>dev.yml: Development workflow which builds and tests pull requests.</li>
-                <li>prod.yml: Production workflow which builds and tests push requests.</li>
-            </ul>
-            <h2>.pytest_cache: offer a mechanism through which other plugins can set values via config. cache.
-                Also stores test failures.</h2>
-            <ul>
-                <li>.gitignore: gitignore file tells Git which files to ignore when committing your project to the
-                    GitHub repository.
-                </li>
-                <li>CACHEDIR.TAG: The cache directory is where files are stored during background uploads and after
-                    upload for quick access should you need to open the file from the network drive
-                </li>
-                <li>README.md: A README file is an essential guide that gives other developers a detailed description
-                    of your GitHub project.
-                </li>
-            </ul>
-            <h2>context_processors: Is a list of dotted Python paths to callables that are used to populate the context
-                when a template is rendered with a request.</h2>
-            <ul>
-                <li>init_.py: Is a feature in flask called blueprint that acts as package of controllers such as
-                    plugins.
-                </li>
-                <li>run.py: The runpy module is used to locate and run Python modules without importing them first.</li>
-            </ul>
-            <h2>Static: A Static Website (sometimes called a flat or stationary page) is displayed in a web browser
-                exactly as it is stored. It contains web pages with fixed content coded in HTML and stored on a web
-                server.</h2>
-            <ul>
-                <li>css: is a stylesheet language used to describe the presentation of a document written in HTML.</li>
-                <li>images: Images which I picked to use on my carousels of the index page.</li>
-                <li>js: JavaScript is a text-based programming language used both on the client-side and server-side
-                    that allows you to make web pages interactive.
-                </li>
-            </ul>
-            <p>&#9642; simple_pages: The Simple Pages plugin allows you to easily create web pages for your public site
-                using a simple form. My website includes one Index/Home page and an additional 4 pages which explain
-                the technologies I learned in IS601 class so far.</p>
-            <p>&#9642; Tests: contains a series of tests such as pytest that check the integrity of the app prior to
-                deploying
-                and merging.</p>
-            <p>&#9642; .coverageerc: Code coverage is a metric that can help you understand how much of your source
-                is tested.</p>
-            <p>&#9642; .dockerignore: allows you to mention a list of files and/or directories which you might want to
-                ignore while building the image.</p>
-            <p>&#9642; .pylintrc: Pylint is a source-code, bug and quality checker for the Python programming
-                language.</p>
-            <p>&#9642; docker-compose.yml: Orchestration file that contains the configuration to develop locally,
-                it overrides the Dockerfile to run the flask development server instead of running the gunicorn server
-                that is used for hosting on Heroku.</p>
-            <p>&#9642; Dockerfile: File used to create an image to run in a container that runs the program.</p>
-            <p>&#9642; heroku.yml: The heroku.yml file is a manifest you can use to define your Heroku app. It allows
-                you to
-                Build Docker images on Heroku.</p>
-            <p>&#9642; pytest.ini: This is the primary pytest configuration file that allows you to change default
-                behavior.</p>
-            <p>&#9642; requirement.txt: Is a type of file that usually stores information about all the libraries,
-                modules,
-                and packages in itself that are used while developing a particular project.</p>
-                <h1>Resources:</h1>
-                <p>
-                    &#9642;https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/
+                <p>In order to test the code with pytest, a test folder is created in the root directory. By creating a
+                    simpletest_test.py
+                    file, we can monitor and test our code. As an example, assert b"Index Page" in response.data allows
+                    us
+                    to create
+                    a version of website and get a request to the homepage. If on the home page we have the Index Page
+                    displayed, it
+                    passes the
+                    test, otherwise it does not pass the test by running pytest and would need to be edited
+                    accordingly.
                 </p>
-                <p>&#9642; setup.py: is utilized to install the different available packages in Python.
+                <p>To create simple pages and successfully testing them, we need to first create a test with the
+                    simple_pages_test
+                    file. Next would be creating a blueprint documentation with the init.py file. The final step would
+                    be
+                    creating
+                    the
+                    simple pages templates. after completing the steps mentioned, we would run the pytest to make sure
+                    our
+                    code
+                    functions
+                    properly before deploying it.
                 </p>
-                <br>
-                <br>
+                <h1>Purpose of Every File in The Project:</h1>
+                <h2>Workflows: A workflow is a configurable-automated process that will run one or more jobs. Workflows
+                    are
+                    defined by a YAML file checked in to your repository</h2>
+                <ul>
+                    <li>dev.yml: Development workflow which builds and tests pull requests.</li>
+                    <li>prod.yml: Production workflow which builds and tests push requests.</li>
+                </ul>
+                <h2>.pytest_cache: offer a mechanism through which other plugins can set values via config. cache.
+                    Also stores test failures.</h2>
+                <ul>
+                    <li>.gitignore: gitignore file tells Git which files to ignore when committing your project to the
+                        GitHub repository.
+                    </li>
+                    <li>CACHEDIR.TAG: The cache directory is where files are stored during background uploads and after
+                        upload for quick access should you need to open the file from the network drive
+                    </li>
+                    <li>README.md: A README file is an essential guide that gives other developers a detailed
+                        description
+                        of your GitHub project.
+                    </li>
+                </ul>
+                <h2>context_processors: Is a list of dotted Python paths to callables that are used to populate the
+                    context
+                    when a template is rendered with a request.</h2>
+                <ul>
+                    <li>init_.py: Is a feature in flask called blueprint that acts as package of controllers such as
+                        plugins.
+                    </li>
+                    <li>run.py: The runpy module is used to locate and run Python modules without importing them
+                        first.
+                    </li>
+                </ul>
+                <h2>Static: A Static Website (sometimes called a flat or stationary page) is displayed in a web browser
+                    exactly as it is stored. It contains web pages with fixed content coded in HTML and stored on a web
+                    server.</h2>
+                <ul>
+                    <li>css: is a stylesheet language used to describe the presentation of a document written in HTML.
+                    </li>
+                    <li>images: Images which I picked to use on my carousels of the index page.</li>
+                    <li>js: JavaScript is a text-based programming language used both on the client-side and server-side
+                        that allows you to make web pages interactive.
+                    </li>
+                </ul>
+                <p>&#9642; simple_pages: The Simple Pages plugin allows you to easily create web pages for your public
+                    site
+                    using a simple form. My website includes one Index/Home page and an additional 4 pages which explain
+                    the technologies I learned in IS601 class so far.</p>
+                <p>&#9642; Tests: contains a series of tests such as pytest that check the integrity of the app prior to
+                    deploying
+                    and merging.</p>
+                <p>&#9642; .coverageerc: Code coverage is a metric that can help you understand how much of your source
+                    is tested.</p>
+                <p>&#9642; .dockerignore: allows you to mention a list of files and/or directories which you might want
+                    to
+                    ignore while building the image.</p>
+                <p>&#9642; .pylintrc: Pylint is a source-code, bug and quality checker for the Python programming
+                    language.</p>
+                <p>&#9642; docker-compose.yml: Orchestration file that contains the configuration to develop locally,
+                    it overrides the Dockerfile to run the flask development server instead of running the gunicorn
+                    server
+                    that is used for hosting on Heroku.</p>
+                <p>&#9642; Dockerfile: File used to create an image to run in a container that runs the program.</p>
+                <p>&#9642; heroku.yml: The heroku.yml file is a manifest you can use to define your Heroku app. It
+                    allows
+                    you to
+                    Build Docker images on Heroku.</p>
+                <p>&#9642; pytest.ini: This is the primary pytest configuration file that allows you to change default
+                    behavior.</p>
+                <p>&#9642; requirement.txt: Is a type of file that usually stores information about all the libraries,
+                    modules,
+                    and packages in itself that are used while developing a particular project.
+                    <br>
+                    <br>
+                </p>
                 <h1>Resources:</h1>
                 <p>
                     &#9642;https://pythonbasics.org/what-is-flask-python/
