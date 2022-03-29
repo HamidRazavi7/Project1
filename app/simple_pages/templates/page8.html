@@ -26,6 +26,41 @@
         <div class="row">
             <div class="col-lg-9">
                 <p>
+                    &#9642;Inheritance: In Inheritance one class is inheriting the properties and methods of another
+                    class.it means that you create a (child) class by deriving from another (parent) class. This way, we
+                    form a hierarchy. The child class reuses all fields and methods of the parent class (common part)
+                    and can implement its own (unique part). Has two types; single and multiple. Like you have
+                    calculator class and statistical calculator. The calculator class could be the parent, and the
+                    statistical calculator could be the child. Because in statistical you would have addition
+                    multiplication and subtraction already, so you want to take them from the parent class and include
+                    in the child class. Class can only have one parent and one child only, basically no grandchildren.
+                    This is single inheritance. In multiple inheritance you can put multiple classes together to from a
+                    super class which is bundle of classes. Rather than parent child relationship for our regular and
+                    statistical calculator we could have a statistical calculator and specify what operations
+                    statistical calculator would do by naming the operations. i.e statistical you get addition,
+                    multiplication, subtraction, multiplication, mean, mode, and …, they have no dependencies on each
+                    other. The bigger the class the harder to use, so make class small even it has one method. By
+                    inheritance you can add classes together. The only time you would use parent child relationship is
+                    when you must share data like when we have a user object and have system admin with different
+                    functionality. We might have parent class which is user, and we might extend it with system
+                    administrator and system admin would have additional functionality to go along with each
+                    object/user.
+                    <br>
+                    <br>
+                    Example code: class Addition(Calculation)
+                    The addition class now has all of the Calculation class code added to it, so we don’t have to repeat
+                    it.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <img src="static/images/solid.jpg" width="1500">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <p>
                     solid is the principles of object-oriented design. By following these principles, you can improve
                     the reliability of your code by working on its structure and its logical consistency. In development
                     teams, following the SOLID principles allows the programs of different developers to work together.
@@ -114,23 +149,40 @@
                 <br>
                 Class Division(calculation):
                 </p>
+            </div>
                 <h1>Design Pattern</h1>
-                <p>Design patterns: this is like the bible of OOP! When you take the properties of OOP and you combine
-                    it with SOLID need certain things that code needs to do, the result becomes design patterns. For
-                    example, if you need to design objects with certain configurations, it provides guidance on how to
-                    create that object. In another words, when you create codes, the design pattern helps you to do it
-                    based on the industry standards, so your solution is consistent with others. The design pattern
-                    allows programmers that use different codes to communicate. Based on the design pattern, regardless
-                    of the language type the code structures are all called the same thing. The following is an example
-                    of design method in calculator project:
-                    <br>
-                    <br>
-                    @classmethod
-                    <br>
-                    def create(cls, tuple_list: tuple):
-                    <br>
-                    return clas(tuple_list)
-                </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <p>Design patterns: this is like the bible of OOP! When you take the properties of OOP and
+                                you combine
+                                it with SOLID need certain things that code needs to do, the result becomes design
+                                patterns. For
+                                example, if you need to design objects with certain configurations, it provides guidance
+                                on how to
+                                create that object. In another words, when you create codes, the design pattern helps
+                                you to do it
+                                based on the industry standards, so your solution is consistent with others. The design
+                                pattern
+                                allows programmers that use different codes to communicate. Based on the design pattern,
+                                regardless
+                                of the language type the code structures are all called the same thing. The following is
+                                an example
+                                of design method in calculator project:
+                                <br>
+                                <br>
+                                @classmethod
+                                <br>
+                                def create(cls, tuple_list: tuple):
+                                <br>
+                                return clas(tuple_list)
+                            </p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="static/images/design_pattern.jpg" width="1500">
+                        </div>
+                    </div>
+                </div>
                 <p>Design patterns are typical solutions to common problems in software design. Each pattern is like a
                     blueprint that you can customize to solve a particular design problem in your code.
                     Creational patterns provide object creation mechanisms that increase flexibility and reuse of
@@ -159,12 +211,8 @@
                     &#9642;https://towardsdatascience.com/solid-coding-in-python-1281392a6a94
                     &#9642;https://refactoring.guru/design-patterns
                 </p>
-            </div>
-            <div class="col-lg-3">
-                <img src="static/images/cd.jpg" width="700">
-            </div>
-        </div>
-    </div>
+     </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
