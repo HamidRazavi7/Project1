@@ -1,5 +1,7 @@
 ##Project Setup
 
+![Running Program](screenshots/test.png)
+
 Link to the Project 1:
 (https://hamidproject.herokuapp.com/)
 
